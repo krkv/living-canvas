@@ -1,32 +1,13 @@
 <html>
 	<head>
 		<title>Evolutionary Art Project</title>
+		<meta charset="UTF-8">
 		<link href="style.css" rel="stylesheet" type="text/css" media="all">
+		<script src="script.js"></script>
 	</head>
 	<body>
 		<section class="main">
-			<canvas id="canvas" width="750" height="750"></canvas>
+			<canvas id="canvas"></canvas>
 		</section>
-		<script>
-			const canvas = document.getElementById('canvas');
-			const ctx = canvas.getContext('2d');
-
-			class Block {
-				constructor() {
-					this.x = Math.floor(Math.random() * 740)
-					this.y = Math.floor(Math.random() * 740)
-					this.s = Math.floor(Math.random() * 20)
-					this.r = Math.floor(Math.random() * 256)
-					this.g = Math.floor(Math.random() * 256)
-					this.b = Math.floor(Math.random() * 256)
-				}
-			}
-
-			for (let index = 0; index < 1000000; index++) {
-				block = new Block()
-				ctx.fillStyle = `rgb(${block.r},${block.g},${block.b})`;
-				ctx.fillRect(block.x, block.y, block.s, block.s);
-			}
-		</script>
 	</body>
 </html>
